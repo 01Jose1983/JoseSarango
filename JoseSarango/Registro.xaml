@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JoseSarango.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="REGISTRO DATOS" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" /> 
+                
+                           
+            <Label x:Name="lblUsuario" Text="." HorizontalTextAlignment="End" FontSize="14"/>
+            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Ingrese Su Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingrese Su nombre" Keyboard="Text"  Grid.Row="0" Grid.Column="1"/>
+                <!-- TextChanged="txtSeguimiento_TextChanged"/-->
+
+                <Label Text="Monto Inicial" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtMonto" Placeholder=" Monto Inicial" Keyboard="Numeric"  Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Pago Mensual" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtPago" Placeholder="Pago"  Grid.Row="3" Grid.Column="1"/>
+                <!-- Keyboard="Numeric"/-->
+            </Grid>
+            
+            <Button x:Name="btnGuardar" Text="Calcular" Clicked="btnGuardar_Clicked"></Button>
+            <Button x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked"></Button>
+            
+                
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
